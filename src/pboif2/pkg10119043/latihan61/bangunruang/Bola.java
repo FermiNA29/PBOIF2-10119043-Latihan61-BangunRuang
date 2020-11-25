@@ -14,21 +14,17 @@ package pboif2.pkg10119043.latihan61.bangunruang;
  * DESKRIPSI : Program bangun ruang
  */
 public class Bola extends BangunRuang{
-    public double setJariJari(double jariJari) {
-        return this.jariJari = jariJari;
+    public void setJariJari(double jariJari) {
+        this.jariJari = jariJari;
     }
     
-    public double getJariJari() {
-        return jariJari;
+    @Override
+    public double hitungVolume() {
+        return (4 * phi * (jariJari * jariJari * jariJari))/3;
     }
     
     @Override
     public void tampilHasil() {
         System.out.printf("Volume Bola = %.1f \n", hitungVolume());
-    }
-
-    @Override
-    public double hitungVolume() {
-        return (4 * phi * (jariJari * jariJari * jariJari))/3;
     }
 }
